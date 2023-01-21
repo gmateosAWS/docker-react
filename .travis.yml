@@ -4,10 +4,10 @@ services:
   - docker
 
 before_install:
-  - docker build -f Dockerfile.dev -t gmateosAWS/docker-react . 
+  - docker build -f Dockerfile.dev -t gmateosaws/docker-react . 
 
 script:
-  - docker run -e CI=true gmateosAWS/docker-react npm run test
+  - docker run -e CI=true gmateosaws/docker-react npm run test
 
 deploy:
   provider: elasticbeanstalk
